@@ -3,14 +3,14 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [DNS Request: Translating Domain Names into IP Addresses](#dns-request-translating-domain-names-into-ip-addresses)
-3. [TCP/IP: The Foundation of Internet Communication](#tcpip-the-foundation-of-internet-communication)
-4. [Firewall: The Digital Gatekeeper](#firewall-the-digital-gatekeeper)
-5. [HTTPS/SSL: Secure Data Transmission](#httpsssl-secure-data-transmission)
-6. [Load Balancer: Distributing the Workload](#load-balancer-distributing-the-workload)
-7. [Web Server: Serving Up Web Pages](#web-server-serving-up-web-pages)
-8. [Application Server: Handling Dynamic Content](#application-server-handling-dynamic-content)
-9. [Database: Storing and Retrieving Data](#database-storing-and-retrieving-data)
+2. [DNS Request: Translating Domain Names into IP Addresses](#2-dns-request-translating-domain-names-into-ip-addresses)
+3. [TCP/IP: The Foundation of Internet Communication](#3-tcpip-the-foundation-of-internet-communication)
+4. [Firewall: The Digital Gatekeeper](#4-firewall-the-digital-gatekeeper)
+5. [HTTPS/SSL: Secure Data Transmission](#5-httpsssl-secure-data-transmission)
+6. [Load Balancer: Distributing the Workload](#6-load-balancer-distributing-the-workload)
+7. [Web Server: Serving Up Web Pages](#7-web-server-serving-up-web-pages)
+8. [Application Server: Handling Dynamic Content](#8-application-server-handling-dynamic-content)
+9. [Database: Storing and Retrieving Data](#9-database-storing-and-retrieving-data)
 10. [TL;DR](#tldr)
 11. [Conclusion](#conclusion)
 12. [Sources](#sources)
@@ -19,7 +19,7 @@
 
 We've all done it countless times—opened our web browsers, typed "google.com" into the address bar, and hit Enter. Almost instantaneously, the Google search page appears like magic. But have you ever wondered what happens behind the scenes? In this article, we'll take you on a fascinating journey through the various steps and technologies involved in making that simple act a reality. Buckle up as we delve into DNS requests, TCP/IP, firewalls, HTTPS/SSL, load balancers, web servers, application servers, and databases.
 
-## 1. DNS Request: Translating Domain Names into IP Addresses
+## 2. DNS Request: Translating Domain Names into IP Addresses
 
 Our journey begins with the Domain Name System (DNS). On the internet, computers identify each other with unique numbers called IP addresses. Computers don't understand human languages, and this is where DNS comes in. Think of DNS like the phonebook of the internet; its primary purpose is to translate human-readable domain names like "google.com" into the numerical IP addresses that computers use to identify each other.
 
@@ -29,7 +29,7 @@ First, your computer checks its local DNS cache. This cache stores recently reso
 
 ![DNS Request](https://cdn.hashnode.com/res/hashnode/image/upload/v1694718540857/36791708-d0f7-4563-8489-42f683a5e99e.png?auto=compress,format&format=webp)
 
-## 2. TCP/IP: The Foundation of Internet Communication
+## 3. TCP/IP: The Foundation of Internet Communication
 
 With the IP address in hand, your computer initiates a connection to the Google server using the Transmission Control Protocol (TCP) over the Internet Protocol (IP), collectively known as TCP/IP. This robust communication protocol ensures data reliability and integrity during transmission.
 
@@ -54,53 +54,69 @@ The primary role of IP is to handle the routing and addressing of data packets a
 
 ![TCP/IP Communication](https://cdn.hashnode.com/res/hashnode/image/upload/v1694723348645/00acffc2-7698-407d-bb8b-11c40de915d4.png?auto=compress,format&format=webp)
 
-## 3. Firewall: The Digital Gatekeeper
+## 4. Firewall: The Digital Gatekeeper
 
-As your data packets traverse the internet, they encounter firewalls—security systems designed to monitor and control incoming and outgoing network traffic based on predetermined security rules. Firewalls act as digital gatekeepers, protecting your computer and network from unauthorized access and potential threats.
+Before your computer establishes a connection with the Google server, it may encounter a firewall. Firewalls act as digital gatekeepers, monitoring incoming and outgoing traffic for security threats. They allow legitimate requests to pass while blocking suspicious or malicious traffic.
 
-Firewalls can be hardware-based, software-based, or a combination of both. They establish a barrier between trusted internal networks and untrusted external networks, such as the internet. By analyzing data packets, firewalls determine whether to allow or block specific traffic based on security rules.
+A firewall is a network security device or software application that inspects and manages the flow of network traffic, both incoming and outgoing, based on a set of predefined security rules. Its primary goal is to enforce a security policy and prevent unauthorized or potentially harmful data packets from entering or leaving a network.
+
+If your incoming request meets the security rules set by the firewall in front of Google's server, it is allowed through, and the browser is able to access the website.
 
 ![Firewall Security](https://cdn.hashnode.com/res/hashnode/image/upload/v1694726332768/fcafd247-9d6a-4ca8-b075-7f0ad922844a.jpeg?auto=compress,format&format=webp)
 
-## 4. HTTPS/SSL: Secure Data Transmission
+## 5. HTTPS/SSL: Secure Data Transmission
 
-When accessing "google.com," your browser uses Hypertext Transfer Protocol Secure (HTTPS), an extension of HTTP that provides secure communication over a computer network. HTTPS ensures that data transmitted between your browser and the web server is encrypted, protecting it from eavesdroppers and man-in-the-middle attacks.
+To secure your data during transit, websites like Google use HTTPS (Hypertext Transfer Protocol Secure) with SSL (Secure Sockets Layer) or its successor, TLS (Transport Layer Security). This encryption ensures that the data exchanged between your browser and the server remains confidential and tamper-proof.
 
-HTTPS relies on the Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS), to encrypt the data exchanged between your browser and the server. This encryption ensures that even if data is intercepted, it cannot be read without the decryption key.
+HTTPS/SSL works through a process called encryption, which scrambles the data transmitted between your browser and the web server. When you connect to a website over HTTPS, your browser and the web server engage in a "handshake." During this process, they agree on encryption methods and exchange cryptographic keys. This ensures that both parties can understand and decode the data being transmitted.
+
+Once the handshake is complete, all data exchanged between your browser and the web server is encrypted. This means that even if someone intercepts the data during transmission, they won't be able to understand it without the decryption keys
+
+SSL/TLS not only encrypts data but also ensures its integrity. This means that the data cannot be altered during transit without detection. If someone tries to tamper with the data, it will be rendered unreadable. When you visit a website with a valid SSL certificate, you can be reasonably sure that you are connecting to a genuine server and not a malicious imposter.
 
 ![HTTPS SSL Encryption](https://cdn.hashnode.com/res/hashnode/image/upload/v1694726958950/d93b312f-55e3-4f62-b545-e7c926c3f025.jpeg?auto=compress,format&format=webp)
 
-## 5. Load Balancer: Distributing the Workload
+## 6. Load Balancer: Distributing the Workload
 
-Upon reaching Google's infrastructure, your request is directed to a load balancer. A load balancer distributes incoming network traffic across multiple servers, ensuring no single server becomes overwhelmed. This distribution optimizes resource use, maximizes throughput, minimizes response time, and ensures reliability.
+Behind the scenes, Google's infrastructure is vast and distributed across multiple servers because it receives billions of website visitors a day. This is where load balancers come into play to evenly distribute user requests among these servers to ensure that no single server is overwhelmed, maintaining optimal website performance.
 
-Load balancers use various algorithms to determine how to distribute traffic, such as round-robin, least connections, or IP hash. By balancing the load, they prevent server overload and contribute to a seamless user experience.
+A load balancer is a network device or software application that acts as an intermediary between client devices (such as web browsers) and a group of backend servers. Its primary purpose is to:
+
+- **Distribute incoming network traffic** or application requests across multiple servers.
+
+- **Enhance scalability** to handle varying levels of traffic. This scalability is crucial for handling sudden traffic spikes without service degradation.
+
+- **Improve Availability** through continuous monitoring. If a server becomes unresponsive or fails, the load balancer can automatically redirect traffic to healthy servers, minimizing downtime and improving service availability.
 
 ![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694727731572/2d170f01-8f00-4e9e-9c74-58b365e99445.jpeg?auto=compress,format&format=webp)
 
-## 6. Load Balancer: Distributing the Workload
+## 7. Web Server: Serving Up Web Pages
 
-Upon reaching Google's infrastructure, your request is directed to a load balancer. A load balancer distributes incoming network traffic across multiple servers, ensuring no single server becomes overwhelmed. This distribution optimizes resource use, maximizes throughput, minimizes response time, and ensures reliability.
+Once your request reaches the web server, it retrieves the requested web page, such as the Google homepage. Web servers, like Apache or Nginx, handle HTTP requests, process server-side scripting, and serve static content to your browser.
 
-Load balancers use various algorithms to determine how to distribute traffic, such as round-robin, least connections, or IP hash. By balancing the load, they prevent server overload and contribute to a seamless user experience.
+A web server is a specialized software or hardware component designed to handle incoming HTTP (Hypertext Transfer Protocol) requests from client devices and respond by delivering web content.
+
+When you request a web page, such as 'google.com,' your browser's request is first received by a load balancer, which directs it to one of many web servers. The web server processes the request, generating a response that includes essential page components like HTML, CSS, and JavaScript. This response is then sent back through the load balancer to your browser, which renders the web page using the received components, resulting in the familiar web page display.
 
 ![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694728529523/315c2371-c3d4-44b4-910d-5464788de970.jpeg?auto=compress,format&format=webp)
 
-## 7. Web Server: Serving Up Web Pages
+## 8. Application Server: Handling Dynamic Content
 
-The web server—in this case, something like Nginx or Apache—is responsible for serving static files (such as images, CSS, and JavaScript) and processing requests for dynamic content by forwarding them to the application server. It acts as the intermediary between the client and the backend services, ensuring that the appropriate resources are delivered.
-
-Web servers also handle caching, logging, and sometimes SSL termination to reduce the load on application servers.
+In addition to static web pages, websites often contain dynamic content, like search results on Google. Application servers, like those running Python, Ruby, or Node.js, handle these dynamic requests, querying databases and generating personalized content.
 
 ![Web Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694728881100/4467dd45-a464-4371-abf9-6d71594e2909.png?auto=compress,format&format=webp)
 
-## 8. Application Server: Handling Dynamic Content
+## 9. Database: Storing and Retrieving Data
 
-Once a request for dynamic content reaches the application server, it processes the business logic and communicates with the database to retrieve or store data. The application server runs the core logic of the application, such as rendering personalized user experiences or processing form submissions.
+Behind the scenes, Google relies on massive databases to store and retrieve information quickly. When you perform a search, the application server queries these databases to fetch the most relevant results, which are then presented to you.
 
-For example, when you search for something on Google, the application server processes your query, retrieves relevant data from the database, and returns a dynamic response that is displayed in your browser.
+A database is a collection of data, and the DBMS is the program that is going to interact with the database and retrieve, add, and modify data in it.
 
 ![Application Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694729215315/0095732c-49d2-4301-bea7-092e346d43a4.png?auto=compress,format&format=webp)
+
+## TL:DR
+
+When you type "google.com" in your browser and press enter, a request is sent to the DNS server that translates human-friendly domain names into computer-friendly IP addresses. Then, TCP/IP, the internet's communication foundation, ensures reliable data exchange with its 3-way and 4-way handshakes. Firewalls act as digital gatekeepers, allowing secure traffic and blocking threats. HTTPS/SSL encrypts data, ensuring confidentiality and integrity. Load balancers evenly distribute traffic to maintain optimal website performance. Web servers serve up web pages, handling HTTP requests and processing scripts, while application servers manage dynamic content like search results. Behind the scenes, massive databases store and retrieve data quickly.
 
 ## Conclusion
 
