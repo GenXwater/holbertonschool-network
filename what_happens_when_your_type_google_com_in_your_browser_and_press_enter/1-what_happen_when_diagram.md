@@ -3,7 +3,7 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [DNS Request: Translating Domain Names into IP Addresses](#dns-request-translating-domain-names-into-ip-addresses)
+2. [DNS Request: Translating Domain Names into IP Addresses](#1. dns-request-translating-domain-names-into-ip-addresses)
 3. [TCP/IP: The Foundation of Internet Communication](#tcpip-the-foundation-of-internet-communication)
 4. [Firewall: The Digital Gatekeeper](#firewall-the-digital-gatekeeper)
 5. [HTTPS/SSL: Secure Data Transmission](#httpsssl-secure-data-transmission)
