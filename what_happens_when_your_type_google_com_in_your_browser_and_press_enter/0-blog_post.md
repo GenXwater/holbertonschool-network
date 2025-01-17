@@ -1,9 +1,5 @@
 # What Happens When You Type google.com and Press Enter
 
-## The Magical Journey of a Google Search
-
-![What Happens When You Type google.com and Press Enter](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/your-image-url)
-
 ## Table of Contents
 
 1. [Introduction](#introduction)

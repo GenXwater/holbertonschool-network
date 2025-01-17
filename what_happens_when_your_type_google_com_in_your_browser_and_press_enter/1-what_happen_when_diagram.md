@@ -1,9 +1,5 @@
 # What Happens When You Type google.com and Press Enter
 
-## The Magical Journey of a Google Search
-
-![What Happens When You Type google.com and Press Enter](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/your-image-url)
-
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -31,7 +27,7 @@ When you type a web address like "google.com" into your browser's address bar an
 
 First, your computer checks its local DNS cache. This cache stores recently resolved domain names and their corresponding IP addresses. If "google.com" is in the cache, your computer can skip the rest of the DNS process, saving time and resources. However, if the IP address isn't in the cache, your computer sends a DNS request to the DNS server. This request translates the human-readable domain name (google.com) into the numerical IP address (e.g., 172.217.3.110) of the server hosting Google's website.
 
-![DNS Request](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/dns-request-image-url)
+![DNS Request](https://cdn.hashnode.com/res/hashnode/image/upload/v1694718540857/36791708-d0f7-4563-8489-42f683a5e99e.png?auto=compress,format&format=webp)
 
 ## 2. TCP/IP: The Foundation of Internet Communication
 
@@ -56,7 +52,7 @@ When data exchange is complete, both devices engage in a graceful connection ter
 
 The primary role of IP is to handle the routing and addressing of data packets across networks. Data is divided into small packets for transmission. Each packet is tagged with a source and destination IP address, allowing routers to determine where to send the packets. Routers use the destination IP address to determine the best path for each packet to reach its destination.
 
-![TCP/IP Communication](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/tcp-ip-communication-image-url)
+![TCP/IP Communication](https://cdn.hashnode.com/res/hashnode/image/upload/v1694723348645/00acffc2-7698-407d-bb8b-11c40de915d4.png?auto=compress,format&format=webp)
 
 ## 3. Firewall: The Digital Gatekeeper
 
@@ -64,7 +60,7 @@ As your data packets traverse the internet, they encounter firewalls—security 
 
 Firewalls can be hardware-based, software-based, or a combination of both. They establish a barrier between trusted internal networks and untrusted external networks, such as the internet. By analyzing data packets, firewalls determine whether to allow or block specific traffic based on security rules.
 
-![Firewall Security](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/firewall-security-image-url)
+![Firewall Security](https://cdn.hashnode.com/res/hashnode/image/upload/v1694726332768/fcafd247-9d6a-4ca8-b075-7f0ad922844a.jpeg?auto=compress,format&format=webp)
 
 ## 4. HTTPS/SSL: Secure Data Transmission
 
@@ -72,7 +68,7 @@ When accessing "google.com," your browser uses Hypertext Transfer Protocol Secur
 
 HTTPS relies on the Secure Sockets Layer (SSL) or its successor, Transport Layer Security (TLS), to encrypt the data exchanged between your browser and the server. This encryption ensures that even if data is intercepted, it cannot be read without the decryption key.
 
-![HTTPS SSL Encryption](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/https-ssl-encryption-image-url)
+![HTTPS SSL Encryption](https://cdn.hashnode.com/res/hashnode/image/upload/v1694726958950/d93b312f-55e3-4f62-b545-e7c926c3f025.jpeg?auto=compress,format&format=webp)
 
 ## 5. Load Balancer: Distributing the Workload
 
@@ -80,7 +76,7 @@ Upon reaching Google's infrastructure, your request is directed to a load balanc
 
 Load balancers use various algorithms to determine how to distribute traffic, such as round-robin, least connections, or IP hash. By balancing the load, they prevent server overload and contribute to a seamless user experience.
 
-![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/load-balancer-image-url)
+![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694727731572/2d170f01-8f00-4e9e-9c74-58b365e99445.jpeg?auto=compress,format&format=webp)
 
 ## 6. Load Balancer: Distributing the Workload
 
@@ -88,7 +84,7 @@ Upon reaching Google's infrastructure, your request is directed to a load balanc
 
 Load balancers use various algorithms to determine how to distribute traffic, such as round-robin, least connections, or IP hash. By balancing the load, they prevent server overload and contribute to a seamless user experience.
 
-![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/load-balancer-image-url)
+![Load Balancer](https://cdn.hashnode.com/res/hashnode/image/upload/v1694728529523/315c2371-c3d4-44b4-910d-5464788de970.jpeg?auto=compress,format&format=webp)
 
 ## 7. Web Server: Serving Up Web Pages
 
@@ -96,7 +92,7 @@ The web server—in this case, something like Nginx or Apache—is responsible f
 
 Web servers also handle caching, logging, and sometimes SSL termination to reduce the load on application servers.
 
-![Web Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/web-server-image-url)
+![Web Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694728881100/4467dd45-a464-4371-abf9-6d71594e2909.png?auto=compress,format&format=webp)
 
 ## 8. Application Server: Handling Dynamic Content
 
@@ -104,7 +100,7 @@ Once a request for dynamic content reaches the application server, it processes 
 
 For example, when you search for something on Google, the application server processes your query, retrieves relevant data from the database, and returns a dynamic response that is displayed in your browser.
 
-![Application Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694681234567/application-server-image-url)
+![Application Server](https://cdn.hashnode.com/res/hashnode/image/upload/v1694729215315/0095732c-49d2-4301-bea7-092e346d43a4.png?auto=compress,format&format=webp)
 
 ## Conclusion
 
